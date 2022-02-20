@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="title">Connect 5 - with Angular</h1>
+    <div class="player">
+        <button (click)="newGame()" class="btn">New Game</button>
+        <div class="status bigtext">Next Move: <span *ngIf="xIsNext">X</span><span *ngIf="!xIsNext">O</span></div>
+    </div>
+    <div class="game-container">
+        <div class="game" id="gamediv">
+            <ng-container *ngFor="let itemx of gridData;let ix = index;">
+                <div *ngFor="let itemy of itemx;let iy = index;" class="game-cell" (click)="cellClick(ix,iy)">
+                    <span *ngIf="gridData[ix][iy]==1" class="x">X</span><span class="o"
+                        *ngIf="gridData[ix][iy]==2">O</span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="bigtext">{{message}}</div>
+</div>
