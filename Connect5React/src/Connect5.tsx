@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { GetWinner } from "./connect5logic";
+import { GetWinner } from "azitmentorconnect5/lib/connect5logic";
 import SmallCell from "./SmallCell";
 import Nextmove from "./nextmove";
 
